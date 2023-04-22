@@ -4,14 +4,6 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { Button, TextField } from "@mui/material";
 
 function EndGame() {
-  const navigate = useNavigate();
-  const [name, setName] = useState("")
-  function handleSubmitDino(e) {
-    
-    e.preventDefault();
-    const newDino = {
-      name,
-    };
 
 const navigate = useNavigate()
 

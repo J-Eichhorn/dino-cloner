@@ -1,5 +1,4 @@
 {
-
   "Dinosaurs": [
     {
       "id": 1,
@@ -24,6 +23,12 @@
       "image": "../images/sauropod.png",
       "dinosaur": "sauropod",
       "id": 4
+    },
+    {
+      "name": "",
+      "image": "",
+      "dinosaur": "",
+      "id": 5
     }
   ],
   "questions": [
