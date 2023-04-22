@@ -1,0 +1,105 @@
+{
+    "questions": [
+      {
+        "question": "Which of the following dinosaurs had a horn on its nose?",
+        "options": [
+          "Stegosaurus",
+          "Triceratops",
+          "Allosaurus",
+          "Diplodocus"
+        ],
+        "answer": "Triceratops"
+      },
+      {
+        "question": "Which of the following dinosaurs had a long, thin neck and a small head?",
+        "options": [
+          "Brachiosaurus",
+          "Velociraptor",
+          "Ankylosaurus",
+          "Tyrannosaurus Rex"
+        ],
+        "answer": "Brachiosaurus"
+      },
+      {
+        "question": "What was the largest carnivorous dinosaur?",
+        "options": [
+          "Allosaurus",
+          "Spinosaurus",
+          "Velociraptor",
+          "T-Rex"
+        ],
+        "answer": "Spinosaurus"
+      },
+      {
+        "question": "Which of the following dinosaurs had a club-like tail?",
+        "options": [
+          "Triceratops",
+          "Ankylosaurus",
+          "Stegosaurus",
+          "Parasaurolophus"
+        ],
+        "answer": "Ankylosaurus"
+      },
+      {
+        "question": "What was the smallest dinosaur?",
+        "options": [
+          "Compsognathus",
+          "Microraptor",
+          "Velociraptor",
+          "Stegosaurus"
+        ],
+        "answer": "Compsognathus"
+      },
+      {
+        "question": "Which of the following dinosaurs had a long, flat snout with numerous teeth?",
+        "options": [
+          "Spinosaurus",
+          "Brachiosaurus",
+          "Diplodocus",
+          "Suchomimus"
+        ],
+        "answer": "Suchomimus"
+      },
+      {
+        "question": "Which dinosaur had a frill of bone around its neck?",
+        "options": [
+          "Stegosaurus",
+          "Parasaurolophus",
+          "Triceratops",
+          "Allosaurus"
+        ],
+        "answer": "Parasaurolophus"
+      },
+      {
+        "question": "Which of the following dinosaurs had a bony crest on its head?",
+        "options": [
+          "Dilophosaurus",
+          "Iguanodon",
+          "Pachycephalosaurus",
+          "Carnotaurus"
+        ],
+        "answer": "Pachycephalosaurus"
+      },
+      {
+        "question": "Which of the following dinosaurs had a sail-like structure on its back?",
+        "options": [
+          "Brachiosaurus",
+          "Spinosaurus",
+          "Ankylosaurus",
+          "Tyrannosaurus Rex"
+        ],
+        "answer": "Spinosaurus"
+      },
+      {
+        "question": "Which dinosaur had a long, curved claw on each foot?",
+        "options": [
+          "Allosaurus",
+          "Velociraptor",
+          "Brachiosaurus",
+          "Diplodocus"
+        ],
+        "answer": "Velociraptor"
+    }
+]
+}
+  
