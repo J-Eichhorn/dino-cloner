@@ -41,12 +41,16 @@
   display: flex;
 }
 
+#nursery-container {
+  width: 100vw;
+  height: 99vh;
+}
+
 #lab-left {
   width: 50vw;
   height: 99.4vh;
   border: black;
   border-style: dashed;
-  padding-top: 100px;
 }
 
 #lab-right {
@@ -101,4 +105,10 @@
   bottom: 0;
   margin-left: 7%;
   margin-bottom: 2%;
+}
+
+#waiver p{
+  font-size: .5rem;
+  font-weight: 500;
+  font-style: oblique;
 }

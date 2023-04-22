@@ -19,6 +19,8 @@ const question = questions.sort(() => .5 - Math.random()).slice(0, 3)
   return (
     <div id="lab-container">
       <div id="lab-left"> 
+      <br></br>
+      <br></br>
           <LabTube  />
         </div>
         <div id="lab-right">
