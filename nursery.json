@@ -1,0 +1,22 @@
+{
+    "Dinosaurs": [
+        {
+            "id": 1,
+            "dinosaur": "theropod",
+            "name": "Therry",
+            "image": "../images/theropod.png"
+        },
+        {
+            "id": 2,
+            "dinosaur": "sauropod",
+            "name": "Saury",
+            "image": "../images/sauropod.png"
+        },
+        {
+            "id": 3,
+            "dinosaur": "pteradon",
+            "name": "Ptery",
+            "image": "../images/pteradon.png"
+        }
+    ]
+}
