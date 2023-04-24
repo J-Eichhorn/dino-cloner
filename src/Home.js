@@ -10,7 +10,7 @@ function Home() {
         <div id="home-right">
             <nav className="navbar">
                 <Link to="/Lab">Start</Link>
-                <Link to="/DinosaurNursery">Dinosaur Nursery</Link>
+                <Link to="/DinosaurNursery">Nursery</Link>
             </nav>
         </div>
     </div>
