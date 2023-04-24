@@ -3,7 +3,8 @@ import LabQuestionsCard from './LabQuestionsCard'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
-function LabQuestionsContainer() {
+function LabQuestionsContainer({question}) {
+
 
   const [question1, setQuestion1] = useState(false)
 
@@ -30,13 +31,13 @@ function LabQuestionsContainer() {
   return (
     <div>
       <div id="question-1" className={`fade-in ${question1 ? 'active' : ''}`}>
-        <LabQuestionsCard showQuestions={showQuestions}/>
+        <LabQuestionsCard randomQuestion={question[0]} showQuestions={showQuestions}/>
       </div>
       <div id="question-2" className={`fade-in ${question2 ? 'active' : ''}`}>
-        {question2 ? <LabQuestionsCard showQuestions={showQuestions}/> : null}
+        {question2 ? <LabQuestionsCard randomQuestion={question[1]} showQuestions={showQuestions}/> : null}
       </div>
       <div id="question-3" className={`fade-in ${question3 ? 'active' : ''}`}>
-        {question3 ? <LabQuestionsCard showQuestions={showQuestions}/> : null}
+        {question3 ? <LabQuestionsCard randomQuestion={question[2]} showQuestions={showQuestions}/> : null}
       </div>
       <div id="finalize">
         {finalize ? <button className="submit" onClick={() => navigate('/EndGame')}>Finalize</button> : null}
