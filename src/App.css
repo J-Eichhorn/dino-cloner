@@ -1,24 +1,40 @@
 .App {
   text-align: center;
 }
+
+/* .navbar {
+  width: 70%;
+  margin:auto;
+  font-size: 3rem;
+}
+
+.link {
+  text-decoration: none;
+} */
+
+
 #dino-card {
   display: inline
 }
+
 #home-container {
   display: flex;
 }
 
 #home-left {
   width: 50vw;
-  height: 100vh;
+  height: 99.4vh;
   border: black;
   border-style: dashed;
 }
 
 #home-right {
   border-style: dashed;
+  display: flex;
   width: 50vw;
-  height: 100vh;
+  height: 99.4vh;
+  justify-content: center;
+  align-items: center;
 }
 
 #lab-container {
@@ -27,15 +43,16 @@
 
 #lab-left {
   width: 50vw;
-  height: 100vh;
+  height: 99.4vh;
   border: black;
   border-style: dashed;
+  padding-top: 100px;
 }
 
 #lab-right {
   border-style: dashed;
   width: 50vw;
-  height: 100vh;
+  height: 99.4vh;
 }
 
 
@@ -77,4 +94,11 @@
 
 .submit {
   animation: shake 0.5s ease-in-out infinite, pulse 1s ease-in-out infinite;
+}
+
+#dna {
+  position: fixed;
+  bottom: 0;
+  margin-left: 7%;
+  margin-bottom: 2%;
 }

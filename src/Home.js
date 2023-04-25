@@ -8,10 +8,12 @@ function Home() {
             <h1>Place Holder Home</h1>
         </div>
         <div id="home-right">
-            <nav className="navbar">
-                <Link to="/Lab">Start</Link>
-                <Link to="/DinosaurNursery">Nursery</Link>
+            <div className="navbar">
+            <nav>
+                <Link className="link" to="/Lab">Start</Link><br></br>
+                <Link className="link" to="/DinosaurNursery">Nursery</Link>
             </nav>
+            </div>
         </div>
     </div>
   )
