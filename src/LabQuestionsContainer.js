@@ -1,34 +1,36 @@
+
 import React from 'react'
 import LabQuestionsCard from './LabQuestionsCard'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect, useContext } from 'react'
 import { MyContext } from './MyProvider'
-
+import { Button } from "@mui/material";
 function LabQuestionsContainer({question}) {
 
   const { newDino } = useContext(MyContext)
 
   const [question1, setQuestion1] = useState(false)
 
-  useEffect(() => {
-    setQuestion1(true)
-  }, [])
 
-  const [question2, setQuestion2] = useState(false)
-  const [question3, setQuestion3] = useState(false)
-  const [finalize, setFinalize] = useState(false)
+  useEffect(() => {
+    setQuestion1(true);
+  }, []);
+
+  const [question2, setQuestion2] = useState(false);
+  const [question3, setQuestion3] = useState(false);
+  const [finalize, setFinalize] = useState(false);
 
   function showQuestions() {
-   if (question2 === false) {
-    setQuestion2(true)
-   } else if (question3 === false) {
-    setQuestion3(true)
-   } else if (finalize === false) {
-    setFinalize(true)
-   }
+    if (question2 === false) {
+      setQuestion2(true);
+    } else if (question3 === false) {
+      setQuestion3(true);
+    } else if (finalize === false) {
+      setFinalize(true);
+    }
   }
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [dinoselector, setDinoSelector] = useState(0)
 
@@ -75,6 +77,7 @@ switch (dinoselector) {
 
   return (
     <div>
+
       <div id="question-1" className={`fade-in ${question1 ? 'active' : ''}`}>
         <LabQuestionsCard handleDinoSelector={handleDinoSelector} randomQuestion={question[0]} showQuestions={showQuestions}/>
       </div>
@@ -88,9 +91,10 @@ switch (dinoselector) {
         
         {finalize? dinoForm() : null}
         
+
       </div>
     </div>
-  )
+  );
 }
 
-export default LabQuestionsContainer
+export default LabQuestionsContainer;

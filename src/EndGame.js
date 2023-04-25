@@ -1,7 +1,17 @@
+
 import React from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { Button, TextField } from "@mui/material";
 
 function EndGame() {
+  const navigate = useNavigate();
+  const [name, setName] = useState("")
+  function handleSubmitDino(e) {
+    
+    e.preventDefault();
+    const newDino = {
+      name,
+    };
 
 const navigate = useNavigate()
 
@@ -22,15 +32,22 @@ switch (state) {
     break;
 }
 
+
   return (
     <div>
       <h1>{state !== null ? "Life, uh, finds a way" : "You shouldn't have played God"}</h1>
       <img src= {dinoImage} />
       <div>
-        <button onClick={() => {navigate("/")}}>Back to Home</button>
+        <Button variant="contained"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Back to Home
+        </Button>
       </div>
     </div>
-  )
+  );
 }
 
-export default EndGame
+export default EndGame;

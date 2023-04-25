@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
+import { ButtonGroup, Button } from '@mui/material'
 function LabQuestionsCard({showQuestions, randomQuestion, handleDinoSelector}) {
+
 
 const [click, setClick] = useState(false)
 
@@ -18,8 +20,10 @@ if (option === randomQuestion.answer) {
 
   return (
     <div>
+
       <h2>{randomQuestion?.question}</h2>
       {answers}
+
     </div>
   )
 }

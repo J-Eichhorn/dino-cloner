@@ -8,7 +8,7 @@ function DinoCardContainer({dinosaurs}) {
         return <DinoCard key={dinosaur.id} dinosaur={dinosaur} />;
     })
   return (
-    <div>
+    <div style={{display: 'flex'}}>
         {dinosaursToRender}
     </div>
   )

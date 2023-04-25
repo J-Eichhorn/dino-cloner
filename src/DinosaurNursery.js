@@ -1,3 +1,4 @@
+
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { MyContext } from './MyProvider';
@@ -14,12 +15,12 @@ function DinosaurNursery(){
     <div>
       <h1>Dinosaur Nursery</h1>
       <button onClick={() => {navigate("/")}}>Back to Home</button>
+
       <div>
-        <DinoCardContainer dinosaurs={dinosaurs}/>
+        <DinoCardContainer dinosaurs={dinosaurs} />
       </div>
     </div>
-    
-  )
+  );
 }
 
-export default DinosaurNursery
+export default DinosaurNursery;

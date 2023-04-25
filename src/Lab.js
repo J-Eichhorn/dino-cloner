@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import LabQuestionsContainer from './LabQuestionsContainer'
-
+import LabTube from './LabTube'
 function Lab() {
 
 const [questions, setQuestions] = useState([])
@@ -19,7 +19,7 @@ const question = questions.sort(() => .5 - Math.random()).slice(0, 3)
   return (
     <div id="lab-container">
       <div id="lab-left"> 
-            <h1>Place Holder Lab</h1>
+          <LabTube  />
         </div>
         <div id="lab-right">
           <LabQuestionsContainer question={question}/>
