@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { ButtonGroup, Button } from '@mui/material'
 function LabQuestionsCard({showQuestions}) {
 
 const [click, setClick] = useState(false)
@@ -7,14 +7,16 @@ const [click, setClick] = useState(false)
   return (
     <div>
       <h2>This is a sample question.</h2>
-      <button disabled={click} 
+      <ButtonGroup>
+      <Button variant='contained' disabled={click} 
         onClick={() => {
         showQuestions()
-        setClick(true)}}>Answer</button>
-      <button disabled={click} 
+        setClick(true)}}>Answer</Button>
+      <Button variant='contained' disabled={click} 
         onClick={() => {
         showQuestions()
-        setClick(true)}}>Answer</button>
+        setClick(true)}}>Answer</Button>
+        </ButtonGroup>
     </div>
   )
 }

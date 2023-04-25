@@ -1,11 +1,11 @@
 import React from 'react'
 import LabQuestionsContainer from './LabQuestionsContainer'
-
+import LabTube from './LabTube'
 function Lab() {
   return (
     <div id="lab-container">
       <div id="lab-left"> 
-            <h1>Place Holder Lab</h1>
+          <LabTube  />
         </div>
         <div id="lab-right">
           <LabQuestionsContainer />
