@@ -1,10 +1,16 @@
-import React from "react";
-import LabQuestionsCard from "./LabQuestionsCard";
-import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+
+import React from 'react'
+import LabQuestionsCard from './LabQuestionsCard'
+import { useNavigate } from 'react-router-dom'
+import { useState, useEffect, useContext } from 'react'
+import { MyContext } from './MyProvider'
 import { Button } from "@mui/material";
-function LabQuestionsContainer() {
-  const [question1, setQuestion1] = useState(false);
+function LabQuestionsContainer({question}) {
+
+  const { newDino } = useContext(MyContext)
+
+  const [question1, setQuestion1] = useState(false)
+
 
   useEffect(() => {
     setQuestion1(true);
@@ -26,27 +32,66 @@ function LabQuestionsContainer() {
 
   const navigate = useNavigate();
 
+  const [dinoselector, setDinoSelector] = useState(0)
+
+  function handleDinoSelector() {
+    setDinoSelector((dinoselector) => dinoselector + 1)
+  }
+
+  const [name, setName] = useState('')
+
+  let dinoImage = ''
+  let dinoSpecies =''
+switch (dinoselector) {
+  case 1:
+    dinoImage = "../images/pteradon.png";
+    dinoSpecies = "pteradon"
+    break;
+  case 2:
+    dinoImage = "../images/sauropod.png";
+    dinoSpecies = "sauropod"
+    break;
+  case 3:
+    dinoImage = "../images/theropod.png";
+    dinoSpecies = "theropod"
+    break;
+}
+
+  function dinoForm() {
+    return <form onSubmit={(e) => {
+      e.preventDefault()
+      if (dinoselector !== null) {
+        newDino({
+          name: name,
+          image: dinoImage,
+          dinosaur: dinoSpecies
+        })
+      }
+      navigate('/EndGame', {state: dinoselector})
+    }}>
+    <label>Enter Name</label><br></br>
+    <input type="text" placeholder='' value={name} onChange={(e) => setName(e.target.value)}/>
+    <input type="submit" className="submit" value="Finalize" />
+  </form>
+  }
+
   return (
     <div>
-      <div id="question-1" className={`fade-in ${question1 ? "active" : ""}`}>
-        <LabQuestionsCard showQuestions={showQuestions} />
+
+      <div id="question-1" className={`fade-in ${question1 ? 'active' : ''}`}>
+        <LabQuestionsCard handleDinoSelector={handleDinoSelector} randomQuestion={question[0]} showQuestions={showQuestions}/>
       </div>
-      <div id="question-2" className={`fade-in ${question2 ? "active" : ""}`}>
-        {question2 ? <LabQuestionsCard showQuestions={showQuestions} /> : null}
+      <div id="question-2" className={`fade-in ${question2 ? 'active' : ''}`}>
+        {question2 ? <LabQuestionsCard handleDinoSelector={handleDinoSelector} randomQuestion={question[1]} showQuestions={showQuestions}/> : null}
       </div>
-      <div id="question-3" className={`fade-in ${question3 ? "active" : ""}`}>
-        {question3 ? <LabQuestionsCard showQuestions={showQuestions} /> : null}
+      <div id="question-3" className={`fade-in ${question3 ? 'active' : ''}`}>
+        {question3 ? <LabQuestionsCard handleDinoSelector={handleDinoSelector} randomQuestion={question[2]} showQuestions={showQuestions}/> : null}
       </div>
       <div id="finalize">
-        {finalize ? (
-          <Button
-            variant="contained"
-            className="submit"
-            onClick={() => navigate("/EndGame")}
-          >
-            Finalize
-          </Button>
-        ) : null}
+        
+        {finalize? dinoForm() : null}
+        
+
       </div>
     </div>
   );

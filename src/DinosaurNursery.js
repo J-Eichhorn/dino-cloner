@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from "react";
 
-import DinoCardContainer from "./DinoCardContainer";
+import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { MyContext } from './MyProvider';
+import DinoCardContainer from './DinoCardContainer';
 
-function DinosaurNursery() {
-  const [dinosaurs, setDinosaurs] = useState([]);
+function DinosaurNursery(){
 
-  useEffect(() => {
-    fetch("http://localhost:8000/Dinosaurs")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setDinosaurs(data);
-      });
-  }, []);
+
+  const navigate = useNavigate()
+
+  const { dinosaurs } = useContext(MyContext)
+
   return (
     <div>
-      <h1 className="nursery">The Nursery</h1>
-        
+      <h1>Dinosaur Nursery</h1>
+      <button onClick={() => {navigate("/")}}>Back to Home</button>
+
       <div>
         <DinoCardContainer dinosaurs={dinosaurs} />
       </div>

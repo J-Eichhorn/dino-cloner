@@ -1,6 +1,8 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
+import React from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { Button, TextField } from "@mui/material";
+
 function EndGame() {
   const navigate = useNavigate();
   const [name, setName] = useState("")
@@ -11,34 +13,30 @@ function EndGame() {
       name,
     };
 
-  fetch("http://localhost:3000/blogs", {
-    method: "POST",
-    headers: {
-      "content-type": "Application/json",
-    },
-    body: JSON.stringify(),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      //  setNewDino(data);
-    });
-  }
-  const dinoForm = () => {
-    <div className="form">
-      <form onSubmit={handleSubmitDino}>
-      <TextField id="outlined-basic" label="Outlined" variant="outlined"> <input
-          onChange={(e) => setName(e.target.value)}
-          type="text"
-          placeholder="Name your dinosaur"
-          value={name}
-        ></input></TextField>
-      </form>
-    </div>;
-  };
+const navigate = useNavigate()
+
+const location = useLocation()
+const state = location.state
+console.log(state)
+
+let dinoImage = ''
+switch (state) {
+  case 1:
+    dinoImage = "../images/pteradon.png";
+    break;
+  case 2:
+    dinoImage = "../images/sauropod.png";
+    break;
+  case 3:
+    dinoImage = "../images/theropod.png";
+    break;
+}
+
+
   return (
     <div>
-      <h1>End Game Screen</h1>
+      <h1>{state !== null ? "Life, uh, finds a way" : "You shouldn't have played God"}</h1>
+      <img src= {dinoImage} />
       <div>
         <Button variant="contained"
           onClick={() => {
