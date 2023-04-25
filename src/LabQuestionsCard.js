@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function LabQuestionsCard({showQuestions, randomQuestion}) {
+function LabQuestionsCard({showQuestions, randomQuestion, handleDinoSelector}) {
 
 const [click, setClick] = useState(false)
 
@@ -12,7 +12,7 @@ const answers = randomQuestion?.options?.map((option) => {
   showQuestions()
   setClick(true)
 if (option === randomQuestion.answer) {
-  console.log('1 point')
+  handleDinoSelector()
 }}}>{option}</button>
 })
 
