@@ -11,7 +11,8 @@ function Home() {
             <div className="navbar">
             <nav>
                 <Link className="link" to="/Lab">Start</Link><br></br>
-                <Link className="link" to="/DinosaurNursery">Nursery</Link>
+                <Link className="link" to="/DinosaurNursery">Nursery</Link><br></br>
+                <Link className="link" to="/Waiver">Liability Waiver</Link>
             </nav>
             </div>
         </div>

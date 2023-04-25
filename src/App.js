@@ -6,6 +6,7 @@ import Lab from './Lab';
 import EndGame from './EndGame';
 import { Routes, Route } from "react-router-dom"
 import DinosaurNursery from './DinosaurNursery';
+import Waiver from './Waiver';
 import { Button } from '@mui/material';
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Lab" element={<Lab />} />
         <Route path="/EndGame" element={<EndGame />} />
         <Route path="/DinosaurNursery" element={<DinosaurNursery />} />
+        <Route path="/Waiver" element={<Waiver />} />
       </Routes>
 
       </MyProvider>
