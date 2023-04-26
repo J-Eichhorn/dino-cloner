@@ -42,8 +42,7 @@
 }
 
 #nursery-container {
-  width: 100vw;
-  height: 99vh;
+  height: 100vh
 }
 
 #lab-left {
@@ -111,4 +110,10 @@
   font-size: .5rem;
   font-weight: 500;
   font-style: oblique;
+}
+
+#dino-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
