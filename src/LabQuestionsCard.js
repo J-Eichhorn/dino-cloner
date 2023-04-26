@@ -34,7 +34,7 @@ function LabQuestionsCard({
 
   return (
     <div>
-      <h2>{randomQuestion?.question}</h2>
+      <h2 className="question-text">{randomQuestion?.question}</h2>
       {answers}
     </div>
   );

@@ -20,6 +20,9 @@ function EndGame() {
     case 3:
       dinoImage = "../images/theropod.png";
       break;
+    case null:
+      dinoImage = "../images/trex_skull.png";
+      break;
   }
 
   return (
