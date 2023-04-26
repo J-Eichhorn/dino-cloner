@@ -6,31 +6,19 @@ import { Button, ButtonGroup, Typography } from "@mui/material";
 function Home() {
   return (
     <div id="home-container">
-      <div id="home-left">
-        <Typography variant="h2" style={{color: "white"  }}>Dino Cloner Lab</Typography>
-      </div>
-      <div id="home-right">
-        <nav className="navbar">
-          <ButtonGroup style={{ margin: 20 }}>
-            <Button
-              style={{ fontSize: 25 }}
-              variant="contained"
-              component={Link}
-              to="/Lab"
-            >
-              Lab
-            </Button>
-            <Button
-              style={{ fontSize: 25 }}
-              variant="contained"
-              component={Link}
-              to="/DinosaurNursery"
-            >
-              Nursery
-            </Button>
-          </ButtonGroup>
-        </nav>
-      </div>
+
+        <div id="home-left"> 
+            <h1>Place Holder Home</h1>
+        </div>
+        <div id="home-right">
+            <div className="navbar">
+            <nav>
+                <Link className="link" to="/Lab">Start</Link><br></br>
+                <Link className="link" to="/DinosaurNursery">Nursery</Link><br></br>
+                <Link className="link" to="/Waiver">Liability Waiver</Link>
+            </nav>
+            </div>
+        </div>
     </div>
   );
 }
