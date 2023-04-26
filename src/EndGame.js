@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
 function EndGame() {
   const navigate = useNavigate();
@@ -26,13 +26,13 @@ function EndGame() {
   }
 
   return (
-    <div>
-      <h1>
-        {state !== null
+    <div style={{paddingTop: '5%'}}>
+      <Typography variant="h2" style={{color: "white"  }}>{state !== null
           ? "Life, uh, finds a way"
-          : "You shouldn't have played God"}
-      </h1>
+          : "You shouldn't have played God"}</Typography>
+      <div className="spacer"></div>
       <img src={dinoImage} alt="dinosaur" />
+      <div className="spacer"></div>
       <div>
         <Button
           variant="contained"

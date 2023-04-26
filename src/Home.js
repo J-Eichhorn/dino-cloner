@@ -10,7 +10,7 @@ function Home() {
   return (
     <div id="home-container">
       <div id="home-left">
-        <Typography variant="h2" style={{color: "white"  }}>Dino Cloner Lab</Typography>
+        <Typography className="title" variant="h2" style={{color: "white"}}>Dino Cloner Lab</Typography>
         <div id="home-dna">
         <img style={{width: 400}}src="../images/mr_dna.png" />
         </div>

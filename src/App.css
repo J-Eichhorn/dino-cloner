@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.title {
+  text-align: end;
+  width: 400px
+}
+
 #dino-card {
   display: inline
 }
@@ -131,4 +136,9 @@
 
 .spacer {
   height: 30px
+}
+
+.timer-wrapper {
+  justify-content: center;
+  padding-top: 5%;
 }
