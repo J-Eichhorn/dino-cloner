@@ -1,5 +1,4 @@
 {
-
   "Dinosaurs": [
     {
       "id": 1,
@@ -20,10 +19,22 @@
       "image": "../images/pteradon.png"
     },
     {
-      "name": "Jim",
+      "name": "",
+      "image": "",
+      "dinosaur": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "image": "../images/pteradon.png",
+      "dinosaur": "pteradon",
+      "id": 5
+    },
+    {
+      "name": "",
       "image": "../images/sauropod.png",
       "dinosaur": "sauropod",
-      "id": 4
+      "id": 6
     }
   ],
   "questions": [
