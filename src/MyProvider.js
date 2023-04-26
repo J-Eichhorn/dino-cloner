@@ -28,9 +28,15 @@ function MyProvider({ children }) {
         .then((data) => {setDinosaurs([...dinosaurs, data])})
     }
 
+    const [waiver, setWaiver] = useState(false)
+
+    function handleWaiver() {
+        setWaiver(true)
+    }
+
     return (
         <MyContext.Provider
-            value={({ dinosaurs: dinosaurs, newDino: newDino })}
+            value={({ dinosaurs: dinosaurs, newDino: newDino, waiver: waiver, handleWaiver: handleWaiver })}
         >
             {children}
         </MyContext.Provider>

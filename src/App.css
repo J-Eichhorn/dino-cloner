@@ -2,34 +2,30 @@
   text-align: center;
 }
 
-/* .navbar {
-  width: 70%;
-  margin:auto;
-  font-size: 3rem;
-}
-
-.link {
-  text-decoration: none;
-} */
-
-
 #dino-card {
   display: inline
 }
 
 #home-container {
   display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 #home-left {
   width: 50vw;
   height: 99.4vh;
-  border: black;
-  border-style: dashed;
+  /* border: black;
+  border-style: dashed; */
+}
+
+#home-dna {
+  margin-top: 10%;
+  margin-left: 40%;
 }
 
 #home-right {
-  border-style: dashed;
+  /* border-style: dashed; */
   display: flex;
   width: 50vw;
   height: 99.4vh;
@@ -39,6 +35,8 @@
 
 #lab-container {
   display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 #nursery-container {
@@ -48,12 +46,12 @@
 #lab-left {
   width: 50vw;
   height: 99.4vh;
-  border: black;
-  border-style: dashed;
+  /* border: black;
+  border-style: dashed; */
 }
 
 #lab-right {
-  border-style: dashed;
+  /* border-style: dashed; */
   width: 50vw;
   height: 99.4vh;
 }
@@ -102,8 +100,13 @@
 #dna {
   position: fixed;
   bottom: 0;
-  margin-left: 7%;
+  margin-left: 2%;
   margin-bottom: 2%;
+}
+
+#waiver {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 #waiver p{
@@ -116,4 +119,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+/* .question-text {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 400px;
+  border-radius: 5%;
+} */
+
+.spacer {
+  height: 30px
 }

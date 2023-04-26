@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { MyContext } from './MyProvider';
 import DinoCardContainer from './DinoCardContainer';
-import { Button } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 function DinosaurNursery(){
 
 
@@ -13,9 +13,8 @@ function DinosaurNursery(){
 
   return (
     <div id="nursery-container">
-      <h1>Dinosaur Nursery</h1>
+      <Typography variant="h2" style={{color: "white"  }}>Dino Nursery</Typography><br></br>
       <Button variant="contained" onClick={() => {navigate("/")}}>Back to Home</Button>
-
       <div>
         <DinoCardContainer dinosaurs={dinosaurs} />
       </div>

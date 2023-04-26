@@ -59,7 +59,7 @@ function LabQuestionsContainer({ question }) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          if (dinoselector !== null) {
+          if (dinoselector !== 0) {
             newDino({
               name: name,
               image: dinoImage,
@@ -121,7 +121,6 @@ function LabQuestionsContainer({ question }) {
           />
         ) : null}
       </div>
-
       <div id="dna">
         <img style={{ width: 200, height: "auto" }} src={mrDNA} />
       </div>

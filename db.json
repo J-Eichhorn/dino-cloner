@@ -17,18 +17,6 @@
       "dinosaur": "pteradon",
       "name": "Ptery",
       "image": "../images/pteradon.png"
-    },
-    {
-      "name": "",
-      "image": "",
-      "dinosaur": "",
-      "id": 4
-    },
-    {
-      "name": "",
-      "image": "../images/pteradon.png",
-      "dinosaur": "pteradon",
-      "id": 5
     }
   ],
   "questions": [

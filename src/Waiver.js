@@ -1,9 +1,10 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
+import { MyContext } from './MyProvider';
 
 function Waiver() {
-
-const content = `WHAT ARE THE BASIC ELEMENTS OF A RELEASE?
+  const content = `WHAT ARE THE BASIC ELEMENTS OF A RELEASE?
 The elements of a basic release are:
 A release of liability and waiver of the right to sue if any loss results from participation in the activity.
 An express assumption of risk where the participant acknowledges understanding the nature of the activity and the risks involved, and chooses voluntarily to accept those risks.
@@ -29,41 +30,33 @@ As a sample, the following language meets certain situations requiring a “medi
 “If I need medical treatment as a result of my participation in this Activity, travel to and from the Activity (including air travel), or any events incidental to this Activity, I agree to be financially responsible for any costs incurred as a result of such treatment. I am aware that the District does not provide health insurance for me and that I should carry my own health insurance.”
 WHAT IS THE RECOMMENDED LANGUAGE WHEN A MINOR IS INVOLVED?
 As a sample, the following language meets certain situations requiring consent by a parent or legal guardian.
-“I am the parent or legal guardian of the Participant. I have read this document, and I am signing it freely. I understand the legal consequences of signing this document, including (a) releasing the District from all liability on my and the Participant’s behalf, (b) waiving my and the Participants’ right to sue the District, (c) and assuming all risks of Participant’s participation in this Activity, including travel to and from the Activity (including air travel) or any events incidental to this Activity. I allow the Participant to participate in this Activity. I understand that I am responsible for the obligations and acts of the Participant as described in this document. I agree to be bound by the terms of this document.”`
+“I am the parent or legal guardian of the Participant. I have read this document, and I am signing it freely. I understand the legal consequences of signing this document, including (a) releasing the District from all liability on my and the Participant’s behalf, (b) waiving my and the Participants’ right to sue the District, (c) and assuming all risks of Participant’s participation in this Activity, including travel to and from the Activity (including air travel) or any events incidental to this Activity. I allow the Participant to participate in this Activity. I understand that I am responsible for the obligations and acts of the Participant as described in this document. I agree to be bound by the terms of this document.”`;
 
+  const navigate = useNavigate();
 
-const navigate = useNavigate()
+  const { handleWaiver } = useContext(MyContext)
 
+  function renderContent() {
+    let waiverContent = ''
+    for (let i = 0; i < 50; i++) {
+        waiverContent += content
+    }
+    return waiverContent
+  }
 
   return (
-
     <div id="waiver">
-        <h1>Liability Waiver</h1>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <p>{content}</p>
-        <br></br>
-        <button onClick={() => navigate('/')}>I AGREE</button>
+      <h1>Liability Waiver</h1>
+      <p>{renderContent()}</p>
+      <br></br>
+      <Button variant="contained" onClick={() => {
+        handleWaiver()
+        navigate("/")}}>
+        I AGREE
+      </Button>
+      <div className="spacer"></div>
     </div>
-  )
+  );
 }
 
-export default Waiver
+export default Waiver;
