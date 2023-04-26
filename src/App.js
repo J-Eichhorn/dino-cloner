@@ -9,8 +9,8 @@ import EndGame from './EndGame';
 import { Routes, Route } from "react-router-dom"
 import DinosaurNursery from './DinosaurNursery';
 import Waiver from './Waiver';
-import { Button } from '@mui/material';
-function App() {
+import { createTheme, ThemeProvider } from '@mui/material';
+
 
 
 
