@@ -1,16 +1,20 @@
+import React from "react";
+import LabQuestionsCard from "./LabQuestionsCard";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
+import { MyContext } from "./MyProvider";
 
-import React from 'react'
-import LabQuestionsCard from './LabQuestionsCard'
-import { useNavigate } from 'react-router-dom'
-import { useState, useEffect, useContext } from 'react'
-import { MyContext } from './MyProvider'
-import { Button } from "@mui/material";
-function LabQuestionsContainer({question}) {
 
-  const { newDino } = useContext(MyContext)
 
-  const [question1, setQuestion1] = useState(false)
 
+
+
+
+
+function LabQuestionsContainer({ question }) {
+  const { newDino } = useContext(MyContext);
+
+  const [question1, setQuestion1] = useState(false);
 
   useEffect(() => {
     setQuestion1(true);
@@ -32,47 +36,59 @@ function LabQuestionsContainer({question}) {
 
   const navigate = useNavigate();
 
-  const [dinoselector, setDinoSelector] = useState(0)
+  const [dinoselector, setDinoSelector] = useState(0);
 
   function handleDinoSelector() {
-    setDinoSelector((dinoselector) => dinoselector + 1)
+    setDinoSelector((dinoselector) => dinoselector + 1);
   }
 
-  const [name, setName] = useState('')
+  const [name, setName] = useState("");
 
-  let dinoImage = ''
-  let dinoSpecies =''
-switch (dinoselector) {
-  case 1:
-    dinoImage = "../images/pteradon.png";
-    dinoSpecies = "pteradon"
-    break;
-  case 2:
-    dinoImage = "../images/sauropod.png";
-    dinoSpecies = "sauropod"
-    break;
-  case 3:
-    dinoImage = "../images/theropod.png";
-    dinoSpecies = "theropod"
-    break;
-}
+  let dinoImage = "";
+  let dinoSpecies = "";
+  switch (dinoselector) {
+    case 1:
+      dinoImage = "../images/pteradon.png";
+      dinoSpecies = "pteradon";
+      break;
+    case 2:
+      dinoImage = "../images/sauropod.png";
+      dinoSpecies = "sauropod";
+      break;
+    case 3:
+      dinoImage = "../images/theropod.png";
+      dinoSpecies = "theropod";
+      break;
+  }
 
   function dinoForm() {
-    return <form onSubmit={(e) => {
-      e.preventDefault()
-      if (dinoselector !== null) {
-        newDino({
-          name: name,
-          image: dinoImage,
-          dinosaur: dinoSpecies
-        })
-      }
-      navigate('/EndGame', {state: dinoselector})
-    }}>
-    <label>Enter Name</label><br></br>
-    <input type="text" placeholder='' value={name} onChange={(e) => setName(e.target.value)}/>
-    <input type="submit" className="submit" value="Finalize" />
-  </form>
+    return (
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (dinoselector !== null) {
+            newDino({
+              name: name,
+              image: dinoImage,
+              dinosaur: dinoSpecies,
+            });
+          }
+          navigate("/EndGame", { state: dinoselector });
+        }}
+      >
+        <label></label>
+        <br></br>{" "}
+        
+          <input
+            type="text"
+            placeholder="Enter name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input type="submit" className="submit" value="Finalize" />
+        
+      </form>
+    );
   }
 
 const [mrDNA, setMrDNA] = useState('./images/mr_dna.png')
@@ -86,6 +102,7 @@ function rightOrWrong(image) {
 
   return (
     <div>
+
 
       <div id="question-1" className={`fade-in ${question1 ? 'active' : ''}`}>
         <LabQuestionsCard handleDinoSelector={handleDinoSelector} randomQuestion={question[0]} showQuestions={showQuestions} rightOrWrong={rightOrWrong}/>
@@ -102,6 +119,7 @@ function rightOrWrong(image) {
       <div id='dna'>
         <img style={{width:200, height:"auto"}} src={mrDNA} />
       </div>
+      <div id="finalize">{finalize ? dinoForm() : null}</div>
     </div>
   );
 }

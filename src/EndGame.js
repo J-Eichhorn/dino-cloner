@@ -1,9 +1,9 @@
-
-import React from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
-import { Button, TextField } from "@mui/material";
+import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Button } from "@mui/material";
 
 function EndGame() {
+
 
 const navigate = useNavigate()
 
@@ -25,12 +25,18 @@ switch (state) {
 }
 
 
+
   return (
     <div>
-      <h1>{state !== null ? "Life, uh, finds a way" : "You shouldn't have played God"}</h1>
-      <img src= {dinoImage} />
+      <h1>
+        {state !== null
+          ? "Life, uh, finds a way"
+          : "You shouldn't have played God"}
+      </h1>
+      <img src={dinoImage} alt="dinosaur" />
       <div>
-        <Button variant="contained"
+        <Button
+          variant="contained"
           onClick={() => {
             navigate("/");
           }}

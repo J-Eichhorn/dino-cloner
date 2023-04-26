@@ -19,15 +19,15 @@
       "image": "../images/pteradon.png"
     },
     {
-      "name": "Jim",
-      "image": "../images/sauropod.png",
-      "dinosaur": "sauropod",
+      "name": "",
+      "image": "",
+      "dinosaur": "",
       "id": 4
     },
     {
       "name": "",
-      "image": "",
-      "dinosaur": "",
+      "image": "../images/pteradon.png",
+      "dinosaur": "pteradon",
       "id": 5
     }
   ],

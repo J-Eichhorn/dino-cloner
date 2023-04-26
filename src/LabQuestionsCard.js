@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 
 import { ButtonGroup, Button } from '@mui/material'
@@ -22,14 +23,13 @@ if (option === randomQuestion.answer) {
 }}>{option}</button>
 })
 
+
   return (
     <div>
-
       <h2>{randomQuestion?.question}</h2>
       {answers}
-
     </div>
-  )
+  );
 }
 
-export default LabQuestionsCard
+export default LabQuestionsCard;

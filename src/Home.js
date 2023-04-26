@@ -1,9 +1,10 @@
-import React from 'react'
-import { Link } from "react-router-dom"
-
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button, ButtonGroup, Typography } from "@mui/material";
 function Home() {
   return (
     <div id="home-container">
+
         <div id="home-left"> 
             <h1>Place Holder Home</h1>
         </div>
@@ -17,7 +18,7 @@ function Home() {
             </div>
         </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
