@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button, ButtonGroup, Typography } from "@mui/material";
+
+// changing ui
 function Home() {
   return (
     <div id="home-container">
