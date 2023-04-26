@@ -12,7 +12,7 @@ function DinosaurNursery(){
   const { dinosaurs } = useContext(MyContext)
 
   return (
-    <div>
+    <div id="nursery-container">
       <h1>Dinosaur Nursery</h1>
       <Button variant="contained" onClick={() => {navigate("/")}}>Back to Home</Button>
 

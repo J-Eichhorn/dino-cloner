@@ -91,32 +91,33 @@ function LabQuestionsContainer({ question }) {
     );
   }
 
+const [mrDNA, setMrDNA] = useState('./images/mr_dna.png')
+
+function rightOrWrong(image) {
+  setMrDNA(image)
+  setTimeout(() => {
+    setMrDNA('./images/mr_dna.png')
+  }, 1500);
+}
+
   return (
     <div>
-      <div id="question-1" className={`fade-in ${question1 ? "active" : ""}`}>
-        <LabQuestionsCard
-          handleDinoSelector={handleDinoSelector}
-          randomQuestion={question[0]}
-          showQuestions={showQuestions}
-        />
+
+
+      <div id="question-1" className={`fade-in ${question1 ? 'active' : ''}`}>
+        <LabQuestionsCard handleDinoSelector={handleDinoSelector} randomQuestion={question[0]} showQuestions={showQuestions} rightOrWrong={rightOrWrong}/>
       </div>
-      <div id="question-2" className={`fade-in ${question2 ? "active" : ""}`}>
-        {question2 ? (
-          <LabQuestionsCard
-            handleDinoSelector={handleDinoSelector}
-            randomQuestion={question[1]}
-            showQuestions={showQuestions}
-          />
-        ) : null}
+      <div id="question-2" className={`fade-in ${question2 ? 'active' : ''}`}>
+        {question2 ? <LabQuestionsCard handleDinoSelector={handleDinoSelector} randomQuestion={question[1]} showQuestions={showQuestions} rightOrWrong={rightOrWrong}/> : null}
       </div>
-      <div id="question-3" className={`fade-in ${question3 ? "active" : ""}`}>
-        {question3 ? (
-          <LabQuestionsCard
-            handleDinoSelector={handleDinoSelector}
-            randomQuestion={question[2]}
-            showQuestions={showQuestions}
-          />
-        ) : null}
+      <div id="question-3" className={`fade-in ${question3 ? 'active' : ''}`}>
+        {question3 ? <LabQuestionsCard handleDinoSelector={handleDinoSelector} randomQuestion={question[2]} showQuestions={showQuestions} rightOrWrong={rightOrWrong}/> : null}
+      </div>
+      <div id="finalize">
+        {finalize? dinoForm() : null}
+      </div>
+      <div id='dna'>
+        <img style={{width:200, height:"auto"}} src={mrDNA} />
       </div>
       <div id="finalize">{finalize ? dinoForm() : null}</div>
     </div>

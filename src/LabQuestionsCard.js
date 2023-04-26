@@ -1,32 +1,28 @@
-import React, { useState } from "react";
 
-import { ButtonGroup, Button } from "@mui/material";
-function LabQuestionsCard({
-  showQuestions,
-  randomQuestion,
-  handleDinoSelector,
-}) {
-  const [click, setClick] = useState(false);
+import React, { useState } from 'react'
 
-  const answers = randomQuestion?.options?.map((option) => {
-    return (
-      <ButtonGroup variant="contained">
-        <Button
-          key={option}
-          disabled={click}
-          onClick={() => {
-            showQuestions();
-            setClick(true);
-            if (option === randomQuestion.answer) {
-              handleDinoSelector();
-            }
-          }}
-        >
-          {option}
-        </Button>
-      </ButtonGroup>
-    );
-  });
+import { ButtonGroup, Button } from '@mui/material'
+function LabQuestionsCard({showQuestions, randomQuestion, handleDinoSelector, rightOrWrong}) {
+
+
+const [click, setClick] = useState(false)
+
+const answers = randomQuestion?.options?.map((option) => {
+  return <button 
+  key={option}
+  disabled={click} 
+  onClick={() => {
+  showQuestions()
+  setClick(true)
+if (option === randomQuestion.answer) {
+  handleDinoSelector()
+  rightOrWrong('./images/mr_dna_right.png')
+} else {
+  rightOrWrong('./images/mr_dna_wrong.png')
+}
+}}>{option}</button>
+})
+
 
   return (
     <div>
