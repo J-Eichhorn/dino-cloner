@@ -17,7 +17,7 @@ function Home() {
       </div>
       <div id="home-right">
         <nav className="nav-bar">
-          <ButtonGroup style={{ margin: 20 }}>
+          <ButtonGroup orientation="vertical" style={{ margin: 20 }}>
             <Button
               style={{ fontSize: 25 }}
               variant="contained"
@@ -40,6 +40,14 @@ function Home() {
             >
               Nursery
             </Button>
+            {/* <Button
+              style={{ fontSize: 25 }}
+              variant="contained"
+              component={Link}
+              to="/MiniGame"
+            >
+              Dino Cloner
+            </Button> */}
             <Button
               style={{ fontSize: 25 }}
               variant="contained"

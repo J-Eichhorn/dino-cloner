@@ -120,5 +120,23 @@
       ],
       "answer": "Velociraptor"
     }
+  ],
+  "Damage": [
+    {
+      "damage": "1",
+      "image": "../images/damage_1.png"
+    },
+    {
+      "damage": "2",
+      "image": "../images/damage_2.png"
+    },
+    {
+      "damage": "3",
+      "image": "../images/damage_3.png"
+    },
+    {
+      "damage": "4",
+      "image": "../images/damage_4.png"
+    }
   ]
 }
