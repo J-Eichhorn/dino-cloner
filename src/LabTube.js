@@ -1,20 +1,32 @@
 import React, { useState } from "react";
-import Bubbles from "./Bubbles";
 
 function LabTube() {
+  const [bubbles, setBubbles] = useState(false);
+
+  function handleMouseEnter() {
+    setBubbles(true);
+  }
+  function handleMouseLeave() {
+    setBubbles(false);
+  }
+
   return (
-    <div style={{position: "absolute"}}>
+    <div style={{ position: "absolute" }}>
       <img
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         style={{ width: 500 }}
         src="../images/test_tube.png"
         alt="test-tube"
       ></img>
-      <img
-        style={{ width: 100, position: "absolute", left: 200, top: 48 }}
-        src="../images/bubbles.gif"
-        alt="bubbles"
-      ></img>
-      <div style={{ position: "absolute", width: 500 }}></div>
+      {bubbles ? (
+        <img
+          style={{ width: 100, position: "absolute", left: 200, top: 48 }}
+          src="../images/bubbles.gif"
+          alt="bubbles"
+        ></img>
+      ) : null}
+      ;
     </div>
   );
 }

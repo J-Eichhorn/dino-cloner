@@ -5,8 +5,8 @@ function DinoCard({ dinosaur }) {
     <div className="dino-card">
       <img style={{height: 200, padding: 50}} src={dinosaur.image} alt={dinosaur.species}></img>
       <div>
-      <h1>{dinosaur.name}</h1>
-      <p>{dinosaur.dinosaur.toUpperCase()}</p>
+      <h1 style={{color: "white"}}>{dinosaur.name}</h1>
+      <p style={{color: "white"}}>{dinosaur.dinosaur.toUpperCase()}</p>
       </div>
     </div>
   );
