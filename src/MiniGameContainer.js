@@ -3,7 +3,8 @@ import MiniGameCracks from "./MiniGameCracks";
 
 function MiniGameContainer({ damage }) {
   return (
-    <div>
+    <div style={{    position: "absolute",
+        left: 400}}  >
       <img
         style={{ width: 600 }}
         src="../images/test_tube.png"

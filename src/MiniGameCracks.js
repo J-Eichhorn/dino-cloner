@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 
 function MiniGameCracks() {
-  const [click, setClick] = useState(true);
-  function handleClick() {
-    setClick(!click);
+  const [damage_1, setDamage_1] = useState(true);
+  const [damage_2, setDamage_2] = useState(false)
+  const [damage_3, setDamage_3] = useState(false)
+  const [damage_4, setDamage_4] = useState(false)
+  
+  function handleDamage(){
+    setDamage_1(!damage_1)
   }
 
   return (
@@ -13,7 +17,9 @@ function MiniGameCracks() {
         left: 42,
       }}
     >
-      <figure
+        {damage_1 ?
+      <figure 
+        onClick={handleDamage}
         id="damage_1"
         style={{
           position: "absolute",
@@ -24,7 +30,7 @@ function MiniGameCracks() {
         }}
       >
         <img src="../images/damage_1.png"></img>
-      </figure>
+      </figure> : null }
       <figure
         id="damage_2"
         style={{
